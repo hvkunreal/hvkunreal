@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin — HVK Unreal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="page" style="padding-top:100px; max-width:1000px; margin:auto;">
+
+<h1>Admin — HVK Unreal</h1>
+
+<!-- Formulaire mot de passe -->
+<div id="login-section">
+  <p>Entrez le mot de passe pour accéder aux candidatures :</p>
+  <input type="password" id="admin-password" placeholder="Mot de passe">
+  <button id="login-btn">Connexion</button>
+  <p id="login-error" style="color:red; display:none;">Mot de passe incorrect</p>
+</div>
+
+<!-- Tableau des candidatures -->
+<div id="admin-section" style="display:none;">
+  <h2>Candidatures reçues</h2>
+  <table id="candidature-table" border="1" cellspacing="0" cellpadding="5">
+    <thead>
+      <tr>
+        <th>Pseudo Discord</th>
+        <th>ID Discord</th>
+        <th>Âge</th>
+        <th>Présentation</th>
+        <th>Motivation</th>
+        <th>Qualités / Défauts</th>
+        <th>Pourquoi lui ?</th>
+        <th>Disponibilités</th>
+        <th>Définition modérateur</th>
+        <th>Qualités modérateur</th>
+        <th>Expérience modération</th>
+        <th>Impartialité</th>
+        <th>Dernier message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Les candidatures s'afficheront ici -->
+    </tbody>
+  </table>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
