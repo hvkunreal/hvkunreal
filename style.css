@@ -1,3 +1,10 @@
+body {
+  background-color: #1a1a1a; /* couleur de fond sombre */
+  color: white;               /* texte lisible */
+  font-family: Arial, sans-serif;
+  transition: background-color 1s; /* pour changement fluide si on fait changer la couleur */
+}
+
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -27,7 +34,7 @@
 .nav-links a:hover,
 .nav-links .active {
   opacity: 1;
-  color: #38bdf8;
+  color: white;
 }
 
 .nav-btn {
@@ -36,6 +43,12 @@
   color: #000 !important;
   border-radius: 6px;
   font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 5px;              /* espace entre les boutons */
+  margin-right: 60px;     /* ⬅️ les décale vers la gauche */
 }
 
 /* PAGES */
@@ -113,4 +126,533 @@
   opacity: 1;
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(56, 223, 248, 0.5);
+}
+
+/* SECTION ACCUEIL CENTRÉE */
+.hero {
+  min-height: calc(100vh - 80px); /* hauteur écran moins la navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.hero p {
+  max-width: 800px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #e5e5e5;
+}
+
+/* BOUTON */
+.hero-btn {
+  background: #22272a;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(56, 223, 248, 0.5);
+}
+
+/* Séparateur */
+.hvk-separator {
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6a5acd, transparent);
+  margin: 60px auto;
+}
+
+/* Conteneur des cartes */
+.hvk-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  width: 85%;
+  margin: auto;
+  padding-bottom: 80px;
+}
+
+/* Carte */
+.hvk-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet hover */
+.hvk-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(106, 90, 205, 0.4);
+}
+
+/* Titres */
+.hvk-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* Texte */
+.hvk-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* Bouton */
+.hvk-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #6a5acd;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hvk-btn:hover {
+  background: #7b6cff;
+  transform: scale(1.05);
+}
+/* En-tête Formulaires */
+.hvk-form-header {
+  width: 85%;
+  margin: 60px auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.hvk-form-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hvk-form-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+/* Séparateur */
+.hvk-separator {
+  width: 85%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6a5acd, transparent);
+  margin: 30px auto 50px;
+}
+
+/* Cartes */
+.hvk-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  width: 85%;
+  margin: auto;
+  padding-bottom: 80px;
+}
+
+/* Carte */
+.hvk-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hvk-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(106, 90, 205, 0.4);
+}
+/* Section À propos */
+.about-section {
+  width: 85%;
+  margin: 100px auto;
+}
+
+/* Titre centré */
+.about-title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 60px;
+}
+
+/* Conteneur */
+.about-container {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Mission (gauche) */
+.about-mission {
+  flex: 1;
+}
+
+.about-mission h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.about-mission p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+/* Rôles (droite) */
+.about-roles {
+  flex: 1;
+  padding: 30px;
+  border-top: 2px solid #6a5acd;
+  border-bottom: 2px solid #6a5acd;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+}
+
+.about-roles h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+/* Un rôle */
+.role {
+  margin-bottom: 25px;
+}
+
+.role strong {
+  font-size: 1.1rem;
+}
+
+.role p {
+  margin-top: 6px;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Responsive mobile */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+/* Section Rejoindre */
+.join-section {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-section {
+  margin-bottom: 20px;  /* ⬅️ quasi collé */
+}
+
+/* Conteneur avec dégradé */
+.join-container {
+  width: 85%;
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6a5acd, #d946ef);
+  box-shadow: 0 20px 40px rgba(106, 90, 205, 0.35);
+}
+
+/* Titre */
+.join-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* Texte */
+.join-container p {
+  font-size: 1.05rem;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Bouton Postuler */
+.join-btn {
+  display: inline-block;
+  padding: 15px 32px;
+  background: linear-gradient(135deg, #7b6cff, #ff6ec7);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover bouton */
+.join-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 110, 199, 0.5);
+}
+/* Section recrutement */
+.recruitment-section {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.recruitment-title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+}
+
+/* Accordéon */
+.accordion-item {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 6px 15px rgba(106, 90, 205, 0.15);
+}
+
+/* Bouton accordéon */
+.accordion-btn {
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  background: #6a5acd;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.accordion-btn:hover {
+  background: #7b6cff;
+}
+
+/* Contenu accordéon */
+.accordion-content {
+  max-height: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content p,
+.accordion-content ul {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 10px 0;
+  color: #e5e5e5;
+}
+
+.accordion-content a {
+  color: #ff6ec7;
+  text-decoration: underline;
+}
+/* Section Discord */
+.discord-section {
+  width: 100%;
+  margin-top: 0px; /* petit doigt entre les sections */
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.discord-container {
+  width: 85%;
+  padding: 5px 5px;
+  text-align: center;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(106,90,205,0.2), rgba(217,70,239,0.2));
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(106,90,205,0.15);
+}
+
+/* Titre */
+.discord-container h2 {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+}
+
+/* Bouton Discord */
+.discord-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #7b6cff, #ff6ec7);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.discord-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(255,110,199,0.5);
+}
+/* Section Communauté */
+.community-section {
+  width: 85%;
+  margin: 100px auto;
+}
+
+.community-title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+}
+
+/* Conteneur des cartes */
+.community-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espace entre les cartes + traits */
+}
+
+/* Carte individuelle */
+.community-card {
+  padding: 30px 25px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 25px rgba(106, 90, 205, 0.15);
+  text-align: center;
+}
+
+.community-card strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+/* Texte des cartes */
+.community-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Trait entre les cartes */
+.community-container hr {
+  border: none;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .community-container {
+    gap: 15px;
+  }
+}
+/* Footer général */
+.main-footer {
+  background: rgba(40, 20, 80, 0.95);
+  color: #fff;
+  padding: 60px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* Colonnes */
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Titres colonnes */
+.footer-left h3, .footer-center h3, .footer-right h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #d6d6ff;
+}
+
+/* Listes */
+.footer-center ul, .footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.footer-center ul li, .footer-right ul li {
+  margin-bottom: 10px;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-center ul li a:hover, .footer-right ul li a:hover {
+  color: #ff6ec7;
+}
+
+/* Paragraphes */
+.footer-left p, .footer-right p {
+  margin: 5px 0;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    min-width: 100%;
+  }
+}
+
+/* Crédits tout en bas */
+.footer-credits {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
 }
