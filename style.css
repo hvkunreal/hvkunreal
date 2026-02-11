@@ -656,3 +656,209 @@ body {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
 }
+
+/* ============================================
+   SECTION STATS — Compteurs YouTube & Twitch
+   ============================================ */
+.stats-section {
+  width: 85%;
+  margin: 80px auto 60px;
+  text-align: center;
+}
+
+.stats-title {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.stats-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Carte stat générique */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 35px 40px;
+  border-radius: 20px;
+  min-width: 240px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+}
+
+/* YouTube */
+.stat-youtube {
+  background: rgba(255, 0, 0, 0.12);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.15);
+}
+
+.stat-youtube:hover {
+  box-shadow: 0 16px 40px rgba(255, 0, 0, 0.3);
+}
+
+.stat-youtube .stat-icon {
+  color: #ff0000;
+}
+
+.stat-youtube .stat-count {
+  color: #ff4444;
+}
+
+.stat-youtube .stat-link:hover {
+  color: #ff4444;
+}
+
+/* Twitch */
+.stat-twitch {
+  background: rgba(145, 70, 255, 0.12);
+  border: 1px solid rgba(145, 70, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(145, 70, 255, 0.15);
+}
+
+.stat-twitch:hover {
+  box-shadow: 0 16px 40px rgba(145, 70, 255, 0.3);
+}
+
+.stat-twitch .stat-icon {
+  color: #9146ff;
+}
+
+.stat-twitch .stat-count {
+  color: #a855f7;
+}
+
+.stat-twitch .stat-link:hover {
+  color: #a855f7;
+}
+
+/* Icône */
+.stat-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+/* Infos texte */
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-platform {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+.stat-count {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.stat-loading {
+  font-size: 1rem;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.stat-error {
+  font-size: 1rem;
+  opacity: 0.6;
+  font-weight: 400;
+  color: #ffaa44;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Lien */
+.stat-link {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-top: 4px;
+}
+
+.stat-link:hover {
+  text-decoration: underline;
+}
+
+/* Note de configuration */
+.stats-note {
+  font-size: 0.82rem;
+  opacity: 0.5;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.stats-note code {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Animation compteur */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.stat-count.loaded {
+  animation: countUp 0.5s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .stat-count {
+    font-size: 2rem;
+  }
+}
