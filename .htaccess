@@ -1,0 +1,19 @@
+# ============================================================
+# .htaccess — Hvk Unreal
+# Supprime le /index.html de l'URL (redirection propre)
+# ============================================================
+
+Options -Indexes
+RewriteEngine On
+
+# Redirige /index.html → / (racine propre, sans index.html)
+RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
+RewriteRule ^(.*/)index\.html$ /$1 [R=301,L]
+
+# Redirige /hvkunreal/index.html → /hvkunreal/ si le site est dans un sous-dossier
+# (Commente les 2 lignes ci-dessus et décommente celles-ci si besoin)
+# RewriteCond %{THE_REQUEST} /hvkunreal/index\.html[\s?] [NC]
+# RewriteRule ^hvkunreal/index\.html$ /hvkunreal/ [R=301,L]
+
+# Charge index.html automatiquement quand on accède à un dossier
+DirectoryIndex index.html
